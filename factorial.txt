@@ -1,0 +1,18 @@
+CALL, 25, 0,            // address
+LOAD, -3,               // 3
+ICONST, 2,              // 5
+ILT,                    // 7 // IF N < 2 RETURN 1
+BRF, 13,                // 8
+ICONST, 1,              // 10
+RET,                    // 12
+LOAD, -3,               // 13 //CONT: RETURN N * FACT(N-1)
+LOAD, -3,               // 15
+ICONST, 1,              // 17
+ISUB,                   // 19
+CALL, 3, 1,             // 20
+IMUL,                   // 23
+RET,                    // 24
+ICONST, 5,              // 25 <-- MAIN METHOD! // PRINT FACT(5)
+CALL, 3, 1,             // 27
+PRINT,                  // 30
+HALT                    // 31
